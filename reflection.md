@@ -5,8 +5,13 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  When running the game for the first time, the game instruction got straight on point and easy to understand. 
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+  At the start I notice that: 
+  * When starting the game for the first time, I didn't submit anything but there is already 1 attempt counted. It shows 8 attempts on the left but however only 7 attempts allow in the center of the screen
+  * After submitting the first guess, the game did not update the attempt, which is still show 7 on the screen
+  * 
 
 **Bug Reproduction Log**
 
@@ -23,7 +28,9 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+  
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+  
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
 ---
