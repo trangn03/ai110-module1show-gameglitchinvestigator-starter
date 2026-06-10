@@ -55,6 +55,9 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
+This could be a testing habit, a prompting strategy, or a way you used Git.
+  - fill here
 - What is one thing you would do differently next time you work with AI on a coding task?
+  - fill here
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  - It depends on what model that you use for the AI. It helpful when it shows you the error that present in the code and acts as the guide ... 
