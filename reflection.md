@@ -32,25 +32,28 @@ Document at least 3 bugs you found. Add rows as needed.
   - I used Claude through VS Code chat feature to help me debug and see what is wrong with the code
   
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-  - fill here
+  - The AI suggested me a
   
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
-  - fill here
+  - The AI suggested wrong on
 
 ---
 
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
+  - filling
+- Describe at least one test you ran (manual or using pytest) and what it showed you about your code.
+  - filling
 - Did AI help you design or understand any tests? How?
+  - filling
 
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+  - fill here
 
 ---
 
