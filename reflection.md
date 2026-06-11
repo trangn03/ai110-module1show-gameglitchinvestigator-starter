@@ -12,7 +12,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
   - When starting the game for the first time, I didn't submit anything but there is already 1 attempt counted. It shows 8 attempts on the left but however only 7 attempts allow in the center of the screen
   - In the submission it said press enter to apply but when Enter button pressed, the number didn't get submit 
   - After submitting the first guess, the game did not update the attempt, which is still show 7 on the screen
-  - 
+  - Once done, the score result in negative number 
 
 **Bug Reproduction Log**
 
@@ -20,20 +20,22 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+|Guess 4. Secret number 11 | Go higher | Go lower | None |
+|Guess 92. Secret number 7 | Go lower | Go higher | None |
+|Press New game button | The game refresh and user can guess the number | The game froze eventhough the screen displays "Game over. Start a new game to try again" | None |
 
 ---
 
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
-  - I used Claude
+  - I used Claude through VS Code chat feature to help me debug and see what is wrong with the code
   
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+  - fill here
   
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+  - fill here
 
 ---
 
