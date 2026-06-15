@@ -42,7 +42,7 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-  - filling
+  - I decide whether a bug was fixed by applying both manual testing on the website and using ```pytest```.
 - Describe at least one test you ran (manual or using pytest) and what it showed you about your code.
   - filling
 - Did AI help you design or understand any tests? How?
@@ -53,16 +53,15 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-  - fill here
-
+  - Everytime a user clicks a button or change the input, Streamlit reruns the entire Python script. So when the secret number got generated like ```secret = random.randint(1,100)```, it get a brand new value on every single click. So if you want it to retained all of the secret number, you have to use ```st.session_state``` so it would keep a memory Streamlit data while the script restarts like guess history or your score. 
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
 This could be a testing habit, a prompting strategy, or a way you used Git.
-  - fill here
+  - One habit that I could reuse for the future projects is that always read through the code to see how the script function then manually test the code at first look so I would understand what the project is about.  
 - What is one thing you would do differently next time you work with AI on a coding task?
-  - fill here
+  - One thing I would do differently next time is rather than just prompt the AI "Fix the code for me" for the whole codebase, which it can lead to misleading details or making assumptions. I would break the code down into sections then give the prompt to be more specific so the AI would observed more information and give better result. 
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
-  - It depends on what model that you use for the AI. It helpful when it shows you the error that present in the code and acts as the guide ... 
+  - This project shows me that the AI can analyze and point out the bugs rapidly even the code executed fine in the terminal. However, AI can make mistake so human still need to check everything before pushing the code into production stage. The AI acts as a helpful assistant whenever I need an overall review to catch small things that I might have missed.
