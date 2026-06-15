@@ -27,7 +27,7 @@ It wrote the code, ran away, and now the game is unplayable.
 
 - Game's purpose
   - Guessing a secret number that build with Streamlit app. First, choose a difficulty and the chance that you have to guess based on your difficulty. The app will give a hint whether you need to guess the number higher or lower. If you run out of attempts, the secret number will be reveal and you have options to start a new game
-- Bugs you found
+- Bugs I found
   - The game already counted one attempt when first started.
   - After submitting the first guess, the game did not update the attempt, which is still show 7 on the screen.
   - The hints were backwards. When user guess too high number, it display "Go HIGHER!" instead of "Go LOWER!".
