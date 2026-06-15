@@ -29,13 +29,13 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
-  - I used Claude through VS Code chat feature to help me debug and see what is wrong with the code
+  - I used Claude through VS Code chat feature to help me debug. I let it read through the whole codebase ```app.py```, ```logic_utils.py```, and the test file to see what happen with the code and diagnose the problems
   
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
-  - The AI suggested me a
+  - The AI suggested me on attempt that when the game begin on ```st.session_state.attemps``` which it set the counter starts at 1, so the first guess is recorded as attempt #2 and it should be initialize to 0. I read through the code to verify and test the game before I change the code. After apply what AI suggested me, I saw that the first attempt was set to 8 instead of 7. 
   
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
-  - The AI suggested wrong on
+  - The AI suggested me on change the mode "Hard" range to 1000 in ```get_range_for_difficulty``` but it is not necessary because the prompt given to guess between 1 and 100. And also while it changed the number to 1000, it would be still apply only for the UI but not in the hardcoded logic so it would be still follow the original range.
 
 ---
 
