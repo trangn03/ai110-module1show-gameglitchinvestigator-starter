@@ -42,11 +42,11 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-  - I decide whether a bug was fixed by applying both manual testing on the website and using ```pytest```.
+  - I decide whether a bug was fixed by applying both manual testing on Streamlit and prompt the AI to generate ```pytest``` cases. With manually testing, I look through Developer Bug Info to see the update on score, secret, etc after each submisison. For automated  testing, I read what the AI generated, and if it matches to what I fix (ex: attempts should be started at 0), I verified in the Streamlit windows. If the issue got resolved, I consider the bug is fixed.
 - Describe at least one test you ran (manual or using pytest) and what it showed you about your code.
-  - filling
+  - I test the Go Higher/Go Lower bugs when the user input a too high number (```test_guess_too_high```), it would display "Go Lower". When user input a too low number(```test_guess_too_low```), it would display "Go Higher". I also verified by rerun the code and guess too high or too low number to confirm that the hint meets expectation.
 - Did AI help you design or understand any tests? How?
-  - filling
+  - The AI helped design the. I asked it to generated one by one test case based on the function that I fixed, and it create tests that mirror the same logic in ```app.py``` (attempt, score, increment) rather than test the whole codebase. 
 
 ---
 
