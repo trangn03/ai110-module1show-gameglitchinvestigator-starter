@@ -42,20 +42,58 @@ It wrote the code, ran away, and now the game is unplayable.
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. **Launch the app.** Run `python -m streamlit run app.py` and it will automatically open the game in the browser. The title "🎮 Game Glitch Investigator" appears with a Setting sidebar.
+2. **Pick a difficulty.** In the sidebar, there are three mode which are Easy, Normal, or Hard with different attempts. The sidebar shows the active range and the attempts allowed, and switching difficulty starts a fresh game.
+3. **Enter a guess and click "Submit Guess 🚀".** A valid in-range number counts as one attempt; the "Attempts left" counter decreases by exactly one per guess. Empty, non-numeric, or out-of-range input shows an error and does not count as an attempt.
+4. **Follow the hint.** With "Show hint" checked, a guess above the secret says "📉 Go LOWER!" and a guess below says "📈 Go HIGHER!" 
+5. **Keep guessing toward the secret.** Each wrong guess is recorded in the history (viewable in the "Developer Debug Info" expander). Score rewards faster wins: an earlier win is worth more (100 − 10 × attempt, minimum 10).
+6. **Win or out of attempt.** Guess the exact number to win — balloons pop and the final score is shown. If you used all the attempt limit, the game ends and reveals the secret.
+7. **Start over with "New Game 🔁".** This resets attempts, score, status, and history, picks a new secret in the current range, and clears the input so the game is immediately playable again
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+============================= test session starts =============================
+platform win32 -- Python 3.13.2, pytest-9.1.0, pluggy-1.6.0 -- C:\Users\xtran\AppData\Local\Programs\Python\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\xtran\Downloads\ai110-module1show-gameglitchinvestigator-starter
+plugins: anyio-4.9.0
+collecting ... collected 30 items
+
+tests/test_game_logic.py::test_winning_guess PASSED                      [  3%]
+tests/test_game_logic.py::test_guess_too_high PASSED                     [  6%]
+tests/test_game_logic.py::test_guess_too_low PASSED                      [ 10%]
+tests/test_game_logic.py::test_parse_guess_valid_number PASSED           [ 13%]
+tests/test_game_logic.py::test_parse_guess_empty_string PASSED           [ 16%]
+tests/test_game_logic.py::test_parse_guess_non_numeric PASSED            [ 20%]
+tests/test_game_logic.py::test_parse_guess_rejects_above_range PASSED    [ 23%]
+tests/test_game_logic.py::test_parse_guess_rejects_below_range PASSED    [ 26%]
+tests/test_game_logic.py::test_parse_guess_accepts_boundary_values PASSED [ 30%]
+tests/test_game_logic.py::test_invalid_input_should_not_count_as_attempt PASSED [ 33%]
+tests/test_game_logic.py::test_out_of_range_should_not_count_as_attempt PASSED [ 36%]
+tests/test_game_logic.py::test_valid_input_should_count_as_attempt PASSED [ 40%]
+tests/test_game_logic.py::test_early_win_scores_more_than_late_win PASSED [ 43%]
+tests/test_game_logic.py::test_win_score_minimum_is_10 PASSED            [ 46%]
+tests/test_game_logic.py::test_too_high_message_says_go_lower PASSED     [ 50%]
+tests/test_game_logic.py::test_too_low_message_says_go_higher PASSED     [ 53%]
+tests/test_game_logic.py::test_win_on_attempt_1_gives_90_points PASSED   [ 56%]
+tests/test_game_logic.py::test_win_on_attempt_5_gives_50_points PASSED   [ 60%]
+tests/test_game_logic.py::test_easy_range PASSED                         [ 63%]
+tests/test_game_logic.py::test_normal_range PASSED                       [ 66%]
+tests/test_game_logic.py::test_hard_range PASSED                         [ 70%]
+tests/test_game_logic.py::test_unknown_difficulty_falls_back_to_full_range PASSED [ 73%]
+tests/test_game_logic.py::test_easy_secret_is_within_range PASSED        [ 76%]
+tests/test_game_logic.py::test_normal_secret_is_within_range PASSED      [ 80%]
+tests/test_game_logic.py::test_new_game_resets_attempts PASSED           [ 83%]
+tests/test_game_logic.py::test_new_game_resets_score PASSED              [ 86%]
+tests/test_game_logic.py::test_new_game_resets_status_to_playing PASSED  [ 90%]
+tests/test_game_logic.py::test_new_game_resets_history PASSED            [ 93%]
+tests/test_game_logic.py::test_won_status_would_block_play_without_reset PASSED [ 96%]
+tests/test_game_logic.py::test_lost_status_would_block_play_without_reset PASSED [100%]
+
+============================= 30 passed in 0.23s ==============================
 ```
 
 ## 🚀 Stretch Features
